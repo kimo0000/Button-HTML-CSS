@@ -1,0 +1,88 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    width: 400px;
+    padding: 20px 30px;
+    background-color: #111;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        width: 80%;
+        max-width: 250px;
+    }
+      ul {
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+}
+
+ul li {
+    cursor: pointer;
+}
+
+ul li label {
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+
+label .btn i {
+    font-size: 22px;
+    color: #111;  
+    font-weight: 900;
+}
+
+label .btn .btn_text {
+    font-size: 14px;
+    color: #111;
+    font-weight: 700;
+}
+
+label input:checked ~ .btn {
+    padding: 1px 10px;
+    border-radius: 6px;
+    background-color: yellow;
+    color: #111;
+}
